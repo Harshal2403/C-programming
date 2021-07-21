@@ -1,25 +1,24 @@
+// 69. Program to find largest number of 'n' numbers.
 #include<stdio.h>
-#include<conio.h>
 
 void main()
 {
-    int a,b;    
+    int n,big,num,i;
 
-    printf("Enter the value of a: ");
-    scanf("%d",&a);
-    printf("Enter the value of b: ");
-    scanf("%d",&b);
+    printf("Enter total numbers: ");
+    scanf("%d",&n);
 
-    if(a>b)
+    printf("Enter %d number: ",1);
+    scanf("%d",&big);
+
+    for (i = 2; i <= n; i++)
     {
-        printf("%d is bigger.\n",a);
+        printf("Enter %d number: ",i);
+        scanf("%d",&num);
+
+        if (num>big)
+            big=num;
+        
     }
-    else if (b>a)
-    {
-        printf("%d is bigger.\n",b);
-    }
-    else {
-        printf("Both are equal.\n");
-    }
-    
+    printf("Largest among entered numbers: %d",big);
 }
